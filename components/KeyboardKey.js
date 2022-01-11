@@ -20,12 +20,20 @@ export default function Key({ keyName, clickHandler }) {
     el = <BackspaceIcon className="h-6 w-6" />;
   }
 
+  let label = keyName;
+  if (keyName == "backspace") {
+    label = "borrar letra";
+  } else if (keyName == "enter") {
+    label = "procesar palabra";
+  }
+
   return (
     <button
       className={`flex-1 rounded uppercase font-bold p-0 sm:p-2 h-16 text-xs tiny:text-base ${color}`}
       onClick={() => {
         clickHandler ? clickHandler(keyName) : null;
       }}
+      aria-label={label}
     >
       {el}
     </button>

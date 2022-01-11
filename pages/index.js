@@ -52,6 +52,7 @@ export default function Index({}) {
               onClick={() => {
                 setShowHelpModal(true);
               }}
+              aria-label="como jugar"
             >
               <QuestionMarkCircleIcon className="h-6 w-6 text-gray-500" />
             </button>
@@ -68,7 +69,10 @@ export default function Index({}) {
                 setShowSettings(true);
               }}
             >
-              <CogIcon className="h-6 w-6 text-gray-500" />
+              <CogIcon
+                className="h-6 w-6 text-gray-500"
+                aria-label="opciones del juego"
+              />
             </button>
           </div>
         </header>
