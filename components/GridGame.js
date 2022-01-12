@@ -7,7 +7,7 @@ import WinModal from "./EndModal";
 import { GameContext } from "./GameContext";
 import Word from "./GridWord";
 
-export default function WordleGrid({ receiverCreator }) {
+export default function GameGrid({ receiverCreator }) {
   const [guess, setGuess] = useState("");
   const [showWinModal, setShowWinModal] = useState(true);
 
@@ -117,16 +117,14 @@ export default function WordleGrid({ receiverCreator }) {
           theme="dark"
         />
 
-        <main className="container mx-auto my-auto max-w-xs">
-          <div className="m-3  ">
-            <div className="flex flex-col gap-1">
-              <Word word={word1} info={game.matrix[0]} toast={toast} />
-              <Word word={word2} info={game.matrix[1]} toast={toast} />
-              <Word word={word3} info={game.matrix[2]} toast={toast} />
-              <Word word={word4} info={game.matrix[3]} toast={toast} />
-              <Word word={word5} info={game.matrix[4]} toast={toast} />
-              <Word word={word6} info={game.matrix[5]} toast={toast} />
-            </div>
+        <main className="container mx-auto my-auto max-w-[220px] tiny:max-w-xs">
+          <div className="flex flex-col gap-1 m-3">
+            <Word word={word1} info={game.matrix[0]} toast={toast} />
+            <Word word={word2} info={game.matrix[1]} toast={toast} />
+            <Word word={word3} info={game.matrix[2]} toast={toast} />
+            <Word word={word4} info={game.matrix[3]} toast={toast} />
+            <Word word={word5} info={game.matrix[4]} toast={toast} />
+            <Word word={word6} info={game.matrix[5]} toast={toast} />
           </div>
         </main>
       </>

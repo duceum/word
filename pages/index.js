@@ -1,7 +1,7 @@
 import { CogIcon, QuestionMarkCircleIcon } from "@heroicons/react/outline";
 import React, { useContext, useState } from "react";
 import { GameContext } from "../components/GameContext";
-import WordleGrid from "../components/GridGame";
+import GameGrid from "../components/GridGame";
 import InfoModal from "../components/InfoModal";
 import Keyboard from "../components/KeyboardUI";
 import Settings from "../components/Settings";
@@ -46,7 +46,7 @@ export default function Index({}) {
 
       <div className="flex flex-col h-screen">
         <header>
-          <div className="flex flex-row mx-auto max-w-lg py-2 border-b">
+          <div className="flex flex-row mx-auto max-w-lg py-2 px-3 border-b">
             <button
               className="my-2 flex-none"
               onClick={() => {
@@ -77,7 +77,7 @@ export default function Index({}) {
           </div>
         </header>
 
-        <WordleGrid receiverCreator={receiverCreator} />
+        <GameGrid receiverCreator={receiverCreator} />
         <Keyboard clickHandler={trigger} />
       </div>
     </div>
