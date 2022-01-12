@@ -25,10 +25,9 @@ export default function Index({}) {
   useEffect(() => {
     const handleResize = () => {
       const doc = document.documentElement;
-      console.log(window.innerHeight);
       doc.style.setProperty("--app-height", `${window.innerHeight}px`);
     };
-    console.log("1");
+    handleResize();
     window.addEventListener("resize", handleResize);
   }, []);
 
