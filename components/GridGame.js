@@ -120,12 +120,12 @@ export default function WordleGrid({ receiverCreator }) {
         <main className="container mx-auto my-auto max-w-xs">
           <div className="m-3  ">
             <div className="flex flex-col gap-1">
-              <Word word={word1} info={game.matrix[0]} />
-              <Word word={word2} info={game.matrix[1]} />
-              <Word word={word3} info={game.matrix[2]} />
-              <Word word={word4} info={game.matrix[3]} />
-              <Word word={word5} info={game.matrix[4]} />
-              <Word word={word6} info={game.matrix[5]} />
+              <Word word={word1} info={game.matrix[0]} toast={toast} />
+              <Word word={word2} info={game.matrix[1]} toast={toast} />
+              <Word word={word3} info={game.matrix[2]} toast={toast} />
+              <Word word={word4} info={game.matrix[3]} toast={toast} />
+              <Word word={word5} info={game.matrix[4]} toast={toast} />
+              <Word word={word6} info={game.matrix[5]} toast={toast} />
             </div>
           </div>
         </main>

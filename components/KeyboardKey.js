@@ -17,7 +17,7 @@ export default function Key({ keyName, clickHandler }) {
 
   let el = keyName;
   if (keyName == "backspace") {
-    el = <BackspaceIcon className="h-6 w-6" />;
+    el = <BackspaceIcon className="h-6 w-6 ml-1" />;
   }
 
   let label = keyName;

@@ -26,13 +26,13 @@ export default function Settings({ closeModal }) {
 
             {/* body */}
             <div className="flex-auto grow mx-5">
-              <div class="flex py-5 border-b border-solid">
-                <div class="flex flex-auto">
+              <div className="flex py-5 border-b border-solid">
+                <div className="flex flex-auto">
                   <p className="text-md">Modo para Daltónicos</p>
                 </div>
-                <div class="flex-initial form-check form-switch">
+                <div className="flex-initial form-check form-switch">
                   <input
-                    class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
                     type="checkbox"
                     role="switch"
                     id="colorBlindMode"
@@ -43,11 +43,33 @@ export default function Settings({ closeModal }) {
                   />
                 </div>
               </div>
+              <div className="flex py-5 border-b border-solid">
+                <div className="flex flex-auto">
+                  <div className="flex flex-col">
+                    <p className="text-md">Ayudas de accesibilidad</p>
+                    <p className="text-[12px] text-gray-500">
+                      Dar click en las letras muestra el estado.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-initial form-check form-switch">
+                  <input
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+                    type="checkbox"
+                    role="switch"
+                    id="accessibilityMode"
+                    checked={game.accessibilityMode}
+                    onChange={() => {
+                      game.setAccessibilityMode(!game.accessibilityMode);
+                    }}
+                  />
+                </div>
+              </div>
             </div>
 
             {/* body */}
             <div className="flex-initial my-2 mx-6 ">
-              <p class="text-[10px] text-gray-500">
+              <p className="text-[10px] text-gray-500">
                 Version en Español de{" "}
                 <a
                   href="https://www.powerlanguage.co.uk/wordle/"

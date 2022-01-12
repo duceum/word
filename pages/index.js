@@ -23,7 +23,7 @@ export default function Index({}) {
   };
 
   return (
-    <div class={`${game.colorBlind ? "colorblind" : ""}`}>
+    <div className={`${game.colorBlind ? "colorblind" : ""}`}>
       {showHelpModal || game.gameStatus == "NEW" ? (
         <InfoModal
           closeModal={() => {

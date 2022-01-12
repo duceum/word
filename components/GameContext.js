@@ -21,6 +21,8 @@ const game = {
   saveGame: () => {},
   colorBlind: false,
   setColorBlind: () => {},
+  accessibilityMode: false,
+  setAccessibilityMode: () => {},
 };
 
 export const GameContext = React.createContext({ game });
@@ -50,6 +52,7 @@ export const GameContextProvider = (props) => {
   const [correct, setCorrect] = useState([]);
   const [gameStatus, setGameStatus] = useState("PLAYING");
   const [colorBlind, setColorBlind] = useState(false);
+  const [accessibilityMode, setAccessibilityMode] = useState(false);
 
   const processWord_ = (word, solution_) => {
     // Internal logic to parse the word and determine if it is correct or not
@@ -127,6 +130,10 @@ export const GameContextProvider = (props) => {
     );
 
     localStorage.setItem("colorBlindTheme", JSON.stringify(colorBlind));
+    localStorage.setItem(
+      "accessibilityMode",
+      JSON.stringify(accessibilityMode)
+    );
   }
 
   useEffect(() => {
@@ -134,6 +141,10 @@ export const GameContextProvider = (props) => {
     const colorBlind_ = localStorage.getItem("colorBlindTheme");
     if (colorBlind_) {
       setColorBlind(JSON.parse(colorBlind_));
+    }
+    const accessibilityMode_ = localStorage.getItem("accessibilityMode");
+    if (accessibilityMode_) {
+      setAccessibilityMode(JSON.parse(accessibilityMode_));
     }
 
     // Set word of the day
@@ -218,6 +229,8 @@ export const GameContextProvider = (props) => {
     saveGame,
     colorBlind,
     setColorBlind,
+    accessibilityMode,
+    setAccessibilityMode,
   };
 
   return (
