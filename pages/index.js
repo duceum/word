@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { GameContext } from "../components/GameContext";
 import GameGrid from "../components/GridGame";
 import InfoModal from "../components/InfoModal";
-import Keyboard from "../components/KeyboardUI";
+import Keyboard from "../components/Keyboard";
 import Settings from "../components/Settings";
 
 export default function Index({}) {
@@ -28,29 +28,29 @@ export default function Index({}) {
         game.colorBlind ? "colorblind" : ""
       }`}
     >
-      {showHelpModal || game.gameStatus == "NEW" ? (
-        <InfoModal
-          closeModal={() => {
-            setShowHelpModal(false);
-            if (game.gameStatus == "NEW") {
-              game.setGameStatus("PLAYING");
-              game.saveGame();
-            }
-          }}
-        />
-      ) : null}
+      <div className="dark:bg-dark dark:text-neutral-100">
+        {showHelpModal || game.gameStatus == "NEW" ? (
+          <InfoModal
+            closeModal={() => {
+              setShowHelpModal(false);
+              if (game.gameStatus == "NEW") {
+                game.setGameStatus("PLAYING");
+                game.saveGame();
+              }
+            }}
+          />
+        ) : null}
 
-      {showSettings ? (
-        <Settings
-          closeModal={() => {
-            setShowSettings(false);
-          }}
-        />
-      ) : null}
+        {showSettings ? (
+          <Settings
+            closeModal={() => {
+              setShowSettings(false);
+            }}
+          />
+        ) : null}
 
-      <div className="flex flex-col h-screen dark:bg-dark dark:text-neutral-100">
-        <header>
-          <div className="flex flex-row mx-auto max-w-lg py-2 px-3 border-b dark:border-neutral-700">
+        <div className="container mx-auto flex flex-col max-w-md h-screen">
+          <header className="flex flex-row max-w-lg py-2 px-3 border-b dark:border-neutral-700">
             <button
               className="my-2 flex-none"
               onClick={() => {
@@ -78,11 +78,11 @@ export default function Index({}) {
                 aria-label="opciones del juego"
               />
             </button>
-          </div>
-        </header>
+          </header>
 
-        <GameGrid receiverCreator={receiverCreator} />
-        <Keyboard clickHandler={trigger} />
+          <GameGrid receiverCreator={receiverCreator} />
+          <Keyboard clickHandler={trigger} />
+        </div>
       </div>
     </div>
   );

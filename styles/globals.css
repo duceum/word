@@ -37,11 +37,6 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.tile {
-  justify-content: center;
-  align-items: center;
-}
-
 .tile::before {
   content: "";
   display: inline-block;

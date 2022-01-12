@@ -41,7 +41,7 @@ export default function GameGrid({ receiverCreator }) {
     handleKey(keyName);
   };
 
-  // To receive the UI keyboard clicked
+  // To receive the UI keyboard click events
   const onCountReceived = (keyName) => {
     handleKey(keyName);
   };
@@ -117,8 +117,11 @@ export default function GameGrid({ receiverCreator }) {
           theme="dark"
         />
 
-        <main className="container mx-auto my-auto max-w-[220px] tiny:max-w-xs">
-          <div className="flex flex-col gap-1 m-3">
+        <main className="flex flex-auto justify-center items-center">
+          <div
+            className="grid grid-rows-6 gap-1 p-3 box-border w-full h-full max-w-[350px] max-h-[420px]"
+            // height={`${Math.min(420, size.y / 3)}px`}
+          >
             <Word word={word1} info={game.matrix[0]} toast={toast} />
             <Word word={word2} info={game.matrix[1]} toast={toast} />
             <Word word={word3} info={game.matrix[2]} toast={toast} />
