@@ -52,7 +52,7 @@ export default function Index({}) {
         <div className="container mx-auto flex flex-col max-w-md h-screen">
           <header className="flex flex-row max-w-lg py-2 px-3 border-b dark:border-neutral-700">
             <button
-              className="my-2 flex-none"
+              className="m-0 sm:my-2 flex-none"
               onClick={() => {
                 setShowHelpModal(true);
               }}
@@ -62,13 +62,13 @@ export default function Index({}) {
             </button>
 
             <div className="flex-auto text-center">
-              <h1 className="uppercase font-extrabold text-3xl tracking-wider">
+              <h1 className="uppercase font-extrabold text-2xl tiny:text-3xl tracking-wider">
                 Wordle (ES)
               </h1>
             </div>
 
             <button
-              className="my-2 flex-none"
+              className="m-0 sm:my-2 flex-none"
               onClick={() => {
                 setShowSettings(true);
               }}
