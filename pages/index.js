@@ -62,7 +62,7 @@ export default function Index({}) {
             </button>
 
             <div className="flex-auto text-center">
-              <h1 className="uppercase font-extrabold text-2xl tiny:text-3xl tracking-wider">
+              <h1 className="uppercase font-extrabold text-2xl sm:text-3xl tracking-wider">
                 Wordle (ES)
               </h1>
             </div>
