@@ -29,7 +29,7 @@ export default function Key({ keyName, clickHandler }) {
 
   return (
     <button
-      className={`flex-1 rounded uppercase font-bold p-0 sm:p-2 h-16 text-xs tiny:text-base ${color}`}
+      className={`flex-1 rounded uppercase font-bold p-1 sm:p-2 h-16 text-xs tiny:text-base ${color}`}
       onClick={() => {
         clickHandler ? clickHandler(keyName) : null;
       }}
