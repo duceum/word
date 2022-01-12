@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --app-height: 100%;
+  --app-height: 100vh;
   --color-absent: 120 124 126;
   --color-present: 201 180 88;
   --color-correct: 106 170 100;
