@@ -23,7 +23,11 @@ export default function Index({}) {
   };
 
   return (
-    <div className={`${game.colorBlind ? "colorblind" : ""}`}>
+    <div
+      className={`${game.darkMode ? "dark" : ""} ${
+        game.colorBlind ? "colorblind" : ""
+      }`}
+    >
       {showHelpModal || game.gameStatus == "NEW" ? (
         <InfoModal
           closeModal={() => {
@@ -44,7 +48,7 @@ export default function Index({}) {
         />
       ) : null}
 
-      <div className="flex flex-col h-screen">
+      <div className="flex flex-col h-screen dark:bg-black dark:text-gray-100">
         <header>
           <div className="flex flex-row mx-auto max-w-lg py-2 px-3 border-b">
             <button
@@ -54,11 +58,11 @@ export default function Index({}) {
               }}
               aria-label="como jugar"
             >
-              <QuestionMarkCircleIcon className="h-6 w-6 text-gray-500" />
+              <QuestionMarkCircleIcon className="h-6 w-6 text-gray-500 dark:text-gray-300" />
             </button>
 
             <div className="flex-auto text-center">
-              <h1 className="uppercase font-extrabold text-4xl tracking-wider">
+              <h1 className="uppercase font-extrabold text-3xl tracking-wider">
                 Wordle (ES)
               </h1>
             </div>
@@ -70,7 +74,7 @@ export default function Index({}) {
               }}
             >
               <CogIcon
-                className="h-6 w-6 text-gray-500"
+                className="h-6 w-6 text-gray-500 dark:text-gray-300"
                 aria-label="opciones del juego"
               />
             </button>

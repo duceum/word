@@ -5,14 +5,14 @@ import { GameContext } from "./GameContext";
 export default function Key({ keyName, clickHandler }) {
   const game = useContext(GameContext);
 
-  let color = "bg-gray-200";
+  let color = "bg-gray-200 dark:bg-gray-500";
 
   if (game.correct.includes(keyName)) {
     color = "bg-correct";
   } else if (game.present.includes(keyName)) {
     color = "bg-present";
   } else if (game.tried.includes(keyName)) {
-    color = "bg-absent";
+    color = "bg-absent dark:bg-gray-900";
   }
 
   let el = keyName;

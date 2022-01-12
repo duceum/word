@@ -6,7 +6,7 @@ export default function Settings({ closeModal }) {
 
   return (
     <>
-      <div className="container mx-auto max-w-lg h-screen bg-white overflow-x-hidden overflow-y-auto fixed inset-0 z-50">
+      <div className="container mx-auto max-w-lg h-screen bg-white overflow-x-hidden overflow-y-auto fixed inset-0 z-50 dark:bg-black dark:text-gray-100">
         <div className="relative mx-auto h-full">
           <div className="flex flex-col w-full h-full outline-none focus:outline-none">
             {/* header */}
@@ -28,11 +28,28 @@ export default function Settings({ closeModal }) {
             <div className="flex-auto grow mx-5">
               <div className="flex py-5 border-b border-solid">
                 <div className="flex flex-auto">
+                  <p className="text-md">Modo oscuro</p>
+                </div>
+                <div className="flex-initial form-check form-switch">
+                  <input
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none checked:dark:bg-blue-500 cursor-pointer shadow-sm"
+                    type="checkbox"
+                    role="switch"
+                    id="darkModeMode"
+                    checked={game.darkMode}
+                    onChange={() => {
+                      game.setDarkMode(!game.darkMode);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="flex py-5 border-b border-solid">
+                <div className="flex flex-auto">
                   <p className="text-md">Modo para Daltónicos</p>
                 </div>
                 <div className="flex-initial form-check form-switch">
                   <input
-                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 dark:bg-gray-700 checked:dark:bg-blue-500 focus:outline-none cursor-pointer shadow-sm"
                     type="checkbox"
                     role="switch"
                     id="colorBlindMode"
@@ -54,7 +71,7 @@ export default function Settings({ closeModal }) {
                 </div>
                 <div className="flex-initial form-check form-switch">
                   <input
-                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm"
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 dark:bg-gray-700 checked:dark:bg-blue-500 focus:outline-none cursor-pointer shadow-sm"
                     type="checkbox"
                     role="switch"
                     id="accessibilityMode"

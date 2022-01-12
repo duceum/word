@@ -19,6 +19,8 @@ const game = {
   setGameStatus: () => {},
   processWord: () => {},
   saveGame: () => {},
+  darkMode: false,
+  setDarkMode: () => {},
   colorBlind: false,
   setColorBlind: () => {},
   accessibilityMode: false,
@@ -51,6 +53,7 @@ export const GameContextProvider = (props) => {
   const [present, setPresent] = useState([]);
   const [correct, setCorrect] = useState([]);
   const [gameStatus, setGameStatus] = useState("PLAYING");
+  const [darkMode, setDarkMode] = useState(false);
   const [colorBlind, setColorBlind] = useState(false);
   const [accessibilityMode, setAccessibilityMode] = useState(false);
 
@@ -129,6 +132,7 @@ export const GameContextProvider = (props) => {
       })
     );
 
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
     localStorage.setItem("colorBlindTheme", JSON.stringify(colorBlind));
     localStorage.setItem(
       "accessibilityMode",
@@ -145,6 +149,10 @@ export const GameContextProvider = (props) => {
     const accessibilityMode_ = localStorage.getItem("accessibilityMode");
     if (accessibilityMode_) {
       setAccessibilityMode(JSON.parse(accessibilityMode_));
+    }
+    const darkMode_ = localStorage.getItem("darkMode");
+    if (darkMode_) {
+      setDarkMode(JSON.parse(darkMode_));
     }
 
     // Set word of the day
@@ -227,6 +235,8 @@ export const GameContextProvider = (props) => {
     setGameStatus,
     processWord,
     saveGame,
+    darkMode,
+    setDarkMode,
     colorBlind,
     setColorBlind,
     accessibilityMode,

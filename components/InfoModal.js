@@ -3,7 +3,7 @@ import Word from "./GridWord";
 export default function InfoModal({ closeModal }) {
   return (
     <>
-      <div className="container mx-auto max-w-lg h-screen bg-white overflow-x-hidden overflow-y-auto fixed inset-0 z-50">
+      <div className="container mx-auto max-w-lg h-screen bg-white overflow-x-hidden overflow-y-auto fixed inset-0 z-50 dark:bg-black dark:text-gray-100">
         <div className="relative mx-auto h-full">
           <div className="flex flex-col w-full h-full outline-none focus:outline-none">
             {/* header */}
