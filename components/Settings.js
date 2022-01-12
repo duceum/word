@@ -6,7 +6,7 @@ export default function Settings({ closeModal }) {
 
   return (
     <>
-      <div className="container mx-auto max-w-lg h-screen bg-white overflow-x-hidden overflow-y-auto fixed inset-0 z-50 dark:bg-black dark:text-gray-100">
+      <div className="container mx-auto max-w-lg h-screen bg-white overflow-x-hidden overflow-y-auto fixed inset-0 z-50 dark:bg-dark dark:text-neutral-100">
         <div className="relative mx-auto h-full">
           <div className="flex flex-col w-full h-full outline-none focus:outline-none">
             {/* header */}
@@ -18,7 +18,7 @@ export default function Settings({ closeModal }) {
                 className="absolute top-0 right-0 p-1 ml-auto "
                 onClick={() => closeModal()}
               >
-                <span className="leading-[0.25] h-5 w-5 text-3xl text-gray-400 block outline-none focus:outline-none">
+                <span className="leading-[0.25] h-5 w-5 text-3xl text-neutral-400 block outline-none focus:outline-none">
                   ×
                 </span>
               </button>
@@ -32,7 +32,7 @@ export default function Settings({ closeModal }) {
                 </div>
                 <div className="flex-initial form-check form-switch">
                   <input
-                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 focus:outline-none checked:dark:bg-blue-500 cursor-pointer shadow-sm"
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-neutral-300 focus:outline-none checked:dark:bg-blue-500 cursor-pointer shadow-sm"
                     type="checkbox"
                     role="switch"
                     id="darkModeMode"
@@ -49,7 +49,7 @@ export default function Settings({ closeModal }) {
                 </div>
                 <div className="flex-initial form-check form-switch">
                   <input
-                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 dark:bg-gray-700 checked:dark:bg-blue-500 focus:outline-none cursor-pointer shadow-sm"
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-neutral-300 dark:bg-neutral-700 checked:dark:bg-blue-500 focus:outline-none cursor-pointer shadow-sm"
                     type="checkbox"
                     role="switch"
                     id="colorBlindMode"
@@ -64,14 +64,14 @@ export default function Settings({ closeModal }) {
                 <div className="flex flex-auto">
                   <div className="flex flex-col">
                     <p className="text-md">Ayudas de accesibilidad</p>
-                    <p className="text-[12px] text-gray-500">
+                    <p className="text-[12px] text-neutral-500">
                       Dar click en las letras muestra el estado.
                     </p>
                   </div>
                 </div>
                 <div className="flex-initial form-check form-switch">
                   <input
-                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-gray-300 dark:bg-gray-700 checked:dark:bg-blue-500 focus:outline-none cursor-pointer shadow-sm"
+                    className="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-no-repeat bg-contain bg-neutral-300 dark:bg-neutral-700 checked:dark:bg-blue-500 focus:outline-none cursor-pointer shadow-sm"
                     type="checkbox"
                     role="switch"
                     id="accessibilityMode"
@@ -86,7 +86,7 @@ export default function Settings({ closeModal }) {
 
             {/* body */}
             <div className="flex-initial my-2 mx-6 ">
-              <p className="text-[10px] text-gray-500">
+              <p className="text-[10px] text-neutral-500">
                 Version en Español de{" "}
                 <a
                   href="https://www.powerlanguage.co.uk/wordle/"

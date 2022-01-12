@@ -18,11 +18,17 @@
   --color-absent: 120 124 126;
   --color-present: 201 180 88;
   --color-correct: 106 170 100;
+  --key-bg: 211 214 218;
 }
 
 .colorblind {
   --color-present: 133 192 249;
   --color-correct: 245 121 58;
+}
+
+.dark {
+  --key-bg: 129 131 132;
+  --color-absent: 58 58 60;
 }
 
 body {

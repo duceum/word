@@ -38,7 +38,7 @@ export default function Letter({ letter, state }) {
   if (letter === undefined || letter === "") {
     return (
       <div
-        className={`tile inline-flex w-full text-2xl tiny:text-4xl uppercase font-bold select-none border-2 border-gray-300 dark:border-gray-700`}
+        className={`tile inline-flex w-full text-2xl tiny:text-4xl uppercase font-bold select-none border-2 border-neutral-300 dark:border-neutral-700`}
       >
         {letter}
       </div>
@@ -46,7 +46,7 @@ export default function Letter({ letter, state }) {
   } else if (letter) {
     return (
       <div
-        className={`tile inline-flex w-full text-2xl tiny:text-4xl uppercase font-bold select-none border-2 border-gray-500 dark:border-gray-700 dark:bg-gray-700`}
+        className={`tile inline-flex w-full text-2xl tiny:text-4xl uppercase font-bold select-none border-2 border-neutral-500 dark:border-neutral-700 dark:bg-neutral-700`}
       >
         {letter}
       </div>

@@ -19,6 +19,8 @@ module.exports = {
         absent: withOpacityValue("--color-absent"),
         present: withOpacityValue("--color-present"),
         correct: withOpacityValue("--color-correct"),
+        key: withOpacityValue("--key-bg"),
+        dark: "#121213",
       },
       screens: {
         tiny: "320px",

@@ -48,9 +48,9 @@ export default function Index({}) {
         />
       ) : null}
 
-      <div className="flex flex-col h-screen dark:bg-black dark:text-gray-100">
+      <div className="flex flex-col h-screen dark:bg-dark dark:text-neutral-100">
         <header>
-          <div className="flex flex-row mx-auto max-w-lg py-2 px-3 border-b">
+          <div className="flex flex-row mx-auto max-w-lg py-2 px-3 border-b dark:border-neutral-700">
             <button
               className="my-2 flex-none"
               onClick={() => {
@@ -58,7 +58,7 @@ export default function Index({}) {
               }}
               aria-label="como jugar"
             >
-              <QuestionMarkCircleIcon className="h-6 w-6 text-gray-500 dark:text-gray-300" />
+              <QuestionMarkCircleIcon className="h-6 w-6 text-neutral-500 dark:text-neutral-600" />
             </button>
 
             <div className="flex-auto text-center">
@@ -74,7 +74,7 @@ export default function Index({}) {
               }}
             >
               <CogIcon
-                className="h-6 w-6 text-gray-500 dark:text-gray-300"
+                className="h-6 w-6 text-neutral-500 dark:text-neutral-600"
                 aria-label="opciones del juego"
               />
             </button>

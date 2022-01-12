@@ -33,7 +33,11 @@ export default function WinModal({ matrix, closeModal }) {
           row.push("🟨");
         }
       } else {
-        row.push("⬜");
+        if (game.darkMode) {
+          row.push("⬛");
+        } else {
+          row.push("⬜");
+        }
       }
     }
 
@@ -67,7 +71,7 @@ export default function WinModal({ matrix, closeModal }) {
       <div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
         <div className="relative mx-auto w-auto max-w-[450px]">
           {/*content*/}
-          <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white dark:bg-gray-900 dark:text-gray-100 outline-none focus:outline-none">
+          <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white dark:bg-dark dark:text-neurtral-100 outline-none focus:outline-none">
             {/*header*/}
             <div className="flex items-start justify-between p-5 pb-0">
               <h3 className="uppercase text-xl text-center font-bold">
@@ -79,7 +83,7 @@ export default function WinModal({ matrix, closeModal }) {
                 className="p-1 ml-auto border-0 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                 onClick={() => closeModal()}
               >
-                <span className="leading-[0.25] text-gray-400 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                <span className="leading-[0.25] text-neurtral-400 h-6 w-6 text-2xl block outline-none focus:outline-none">
                   ×
                 </span>
               </button>
