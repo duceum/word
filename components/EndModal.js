@@ -46,7 +46,7 @@ export default function WinModal({ matrix, closeModal }) {
     shareTxt = shareTxt + row.join("") + "\n";
   }
 
-  shareTxt = shareTxt + "\nhttps://wordle.danielfrg.com";
+  // shareTxt = shareTxt + "\nhttps://wordle.danielfrg.com";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shareTxt);
